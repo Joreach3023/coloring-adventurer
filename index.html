@@ -57,6 +57,18 @@
         .cta:hover {
             background: #e68a00;
         }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: #ff9900;
+        }
         .testimonial {
             margin: 40px auto;
             max-width: 600px;
@@ -113,19 +125,19 @@
     
     <section class="gallery">
         <div class="product">
-            <img src="image1.jpg" alt="Cahier de coloriage 1">
+            <img src="image1/cahier1.jpg" alt="Cahier de coloriage 1">
             <p id="product1">Cahier de coloriage #1</p>
         </div>
         <div class="product">
-            <img src="image2.jpg" alt="Cahier de coloriage 2">
+            <img src="image2/cahier2.jpg" alt="Cahier de coloriage 2">
             <p id="product2">Cahier de coloriage #2</p>
         </div>
         <div class="product">
-            <img src="image3.jpg" alt="Cahier de coloriage 3">
+            <img src="image3/cahier3.jpg" alt="Cahier de coloriage 3">
             <p id="product3">Cahier de coloriage #3</p>
         </div>
         <div class="product">
-            <img src="image4.jpg" alt="Cahier de coloriage 4">
+            <img src="image4/cahier4.jpg" alt="Cahier de coloriage 4">
             <p id="product4">Cahier de coloriage #4</p>
         </div>
     </section>
@@ -143,7 +155,12 @@
     </section>
     
     <footer>
-        <a href="https://www.amazon.ca/stores/Coloring-Adventurer/author/B0DTT5ZTY7?language=fr&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true" class="cta" id="ctaText">Acheter sur Amazon</a>
+        <a href="https://www.amazon.com/ColoringAdventurer" class="cta" id="ctaText">Acheter sur Amazon</a>
+        <div class="social-links">
+            <a href="https://www.instagram.com/ColoringAdventurer" target="_blank" id="instagramLink">Instagram</a>
+            <a href="https://www.tiktok.com/@ColoringAdventurer" target="_blank" id="tiktokLink">TikTok</a>
+            <a href="https://www.youtube.com/c/ColoringAdventurer" target="_blank" id="youtubeLink">YouTube</a>
+        </div>
         <p>&copy; 2025 Coloring Adventurer</p>
     </footer>
 
@@ -160,7 +177,10 @@
                 testimonialText: "\"A wonderful coloring book, my children love it!\" - Sophie L.",
                 newsletterTitle: "Subscribe",
                 newsletterText: "Get updates on our new coloring books!",
-                ctaText: "Buy on Amazon"
+                ctaText: "Buy on Amazon",
+                instagramLink: "Instagram",
+                tiktokLink: "TikTok",
+                youtubeLink: "YouTube"
             },
             fr: {
                 title: "Coloring Adventurer",
@@ -173,7 +193,10 @@
                 testimonialText: "\"Un superbe cahier de coloriage, mes enfants adorent !\" - Sophie L.",
                 newsletterTitle: "Abonnez-vous",
                 newsletterText: "Recevez des mises à jour sur nos nouveaux cahiers !",
-                ctaText: "Acheter sur Amazon"
+                ctaText: "Acheter sur Amazon",
+                instagramLink: "Instagram",
+                tiktokLink: "TikTok",
+                youtubeLink: "YouTube"
             }
         };
 
@@ -196,6 +219,9 @@
             document.getElementById('newsletterTitle').innerText = translations[currentLanguage].newsletterTitle;
             document.getElementById('newsletterText').innerText = translations[currentLanguage].newsletterText;
             document.getElementById('ctaText').innerText = translations[currentLanguage].ctaText;
+            document.getElementById('instagramLink').innerText = translations[currentLanguage].instagramLink;
+            document.getElementById('tiktokLink').innerText = translations[currentLanguage].tiktokLink;
+            document.getElementById('youtubeLink').innerText = translations[currentLanguage].youtubeLink;
 
             // Update language selector text
             document.querySelector('.language-selector').innerText = currentLanguage === 'fr' ? 'EN' : 'FR';
