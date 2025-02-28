@@ -57,18 +57,6 @@
         .cta:hover {
             background: #e68a00;
         }
-        .social-links {
-            margin-top: 20px;
-        }
-        .social-links a {
-            margin: 0 10px;
-            font-size: 30px;
-            color: white;
-            text-decoration: none;
-        }
-        .social-links a:hover {
-            color: #ff9900;
-        }
         .testimonial {
             margin: 40px auto;
             max-width: 600px;
@@ -103,130 +91,68 @@
         .newsletter button:hover {
             background: #e68a00;
         }
-        .language-selector {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #333;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
         }
     </style>
 </head>
 <body>
-    <div class="language-selector" onclick="toggleLanguage()">FR</div>
-
     <header>
-        <h1 id="title">Coloring Adventurer</h1>
-        <p id="tagline">Découvrez nos cahiers de coloriage inspirants</p>
+        <h1>Coloring Adventurer</h1>
+        <p>Découvrez nos cahiers de coloriage inspirants</p>
     </header>
     
     <section class="gallery">
         <div class="product">
-            <img src="image1.jpg" alt="Cahier de coloriage 1">
-            <p id="product1">Cahier de coloriage #1</p>
+            <img src="image1/cahier1.jpg" alt="Cahier de coloriage 1">
+            <p>Cahier de coloriage #1</p>
         </div>
         <div class="product">
-            <img src="image2.jpg" alt="Cahier de coloriage 2">
-            <p id="product2">Cahier de coloriage #2</p>
+            <img src="image2/cahier2.jpg" alt="Cahier de coloriage 2">
+            <p>Cahier de coloriage #2</p>
         </div>
         <div class="product">
-            <img src="image3.jpg" alt="Cahier de coloriage 3">
-            <p id="product3">Cahier de coloriage #3</p>
+            <img src="image3/cahier3.jpg" alt="Cahier de coloriage 3">
+            <p>Cahier de coloriage #3</p>
         </div>
         <div class="product">
-            <img src="image4.jpg" alt="Cahier de coloriage 4">
-            <p id="product4">Cahier de coloriage #4</p>
+            <img src="image4/cahier4.jpg" alt="Cahier de coloriage 4">
+            <p>Cahier de coloriage #4</p>
         </div>
     </section>
     
     <section class="testimonial">
-        <h3 id="testimonialTitle">Avis des clients</h3>
-        <p id="testimonialText">"Un superbe cahier de coloriage, mes enfants adorent !" - Sophie L.</p>
+        <h3>Avis des clients</h3>
+        <p>"Un superbe cahier de coloriage, mes enfants adorent !" - Sophie L.</p>
     </section>
     
     <section class="newsletter">
-        <h3 id="newsletterTitle">Abonnez-vous</h3>
-        <p id="newsletterText">Recevez des mises à jour sur nos nouveaux cahiers !</p>
+        <h3>Abonnez-vous</h3>
+        <p>Recevez des mises à jour sur nos nouveaux cahiers !</p>
         <input type="email" placeholder="Votre email">
         <button>S'abonner</button>
     </section>
-    
+
+    <!-- Liens vers les réseaux sociaux -->
     <footer>
-        <a href="https://www.amazon.com/ColoringAdventurer" class="cta" id="ctaText">Acheter sur Amazon</a>
-        <div class="social-links">
-            <a href="https://www.instagram.com/ColoringAdventurer" target="_blank" id="instagramLink">Instagram</a>
-            <a href="https://www.tiktok.com/@ColoringAdventurer" target="_blank" id="tiktokLink">TikTok</a>
-            <a href="https://www.youtube.com/c/ColoringAdventurer" target="_blank" id="youtubeLink">YouTube</a>
-        </div>
+        <a href="https://www.instagram.com/coloringadventurer" target="_blank">
+            <img src="icone/instagram.png" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://www.youtube.com/coloringadventurer" target="_blank">
+            <img src="icone/youtube.png" alt="YouTube" class="social-icon">
+        </a>
+        <a href="https://www.tiktok.com/@coloringadventurer" target="_blank">
+            <img src="icone/tiktok.png" alt="TikTok" class="social-icon">
+        </a>
+        <a href="https://www.amazon.com/ColoringAdventurer" class="cta">Acheter sur Amazon</a>
         <p>&copy; 2025 Coloring Adventurer</p>
     </footer>
-
-    <script>
-        const translations = {
-            en: {
-                title: "Coloring Adventurer",
-                tagline: "Discover our inspiring coloring books",
-                product1: "Coloring Book #1",
-                product2: "Coloring Book #2",
-                product3: "Coloring Book #3",
-                product4: "Coloring Book #4",
-                testimonialTitle: "Customer Reviews",
-                testimonialText: "\"A wonderful coloring book, my children love it!\" - Sophie L.",
-                newsletterTitle: "Subscribe",
-                newsletterText: "Get updates on our new coloring books!",
-                ctaText: "Buy on Amazon",
-                instagramLink: "Instagram",
-                tiktokLink: "TikTok",
-                youtubeLink: "YouTube"
-            },
-            fr: {
-                title: "Coloring Adventurer",
-                tagline: "Découvrez nos cahiers de coloriage inspirants",
-                product1: "Cahier de coloriage #1",
-                product2: "Cahier de coloriage #2",
-                product3: "Cahier de coloriage #3",
-                product4: "Cahier de coloriage #4",
-                testimonialTitle: "Avis des clients",
-                testimonialText: "\"Un superbe cahier de coloriage, mes enfants adorent !\" - Sophie L.",
-                newsletterTitle: "Abonnez-vous",
-                newsletterText: "Recevez des mises à jour sur nos nouveaux cahiers !",
-                ctaText: "Acheter sur Amazon",
-                instagramLink: "Instagram",
-                tiktokLink: "TikTok",
-                youtubeLink: "YouTube"
-            }
-        };
-
-        let currentLanguage = 'fr';
-
-        function toggleLanguage() {
-            currentLanguage = currentLanguage === 'fr' ? 'en' : 'fr';
-            updateText();
-        }
-
-        function updateText() {
-            document.getElementById('title').innerText = translations[currentLanguage].title;
-            document.getElementById('tagline').innerText = translations[currentLanguage].tagline;
-            document.getElementById('product1').innerText = translations[currentLanguage].product1;
-            document.getElementById('product2').innerText = translations[currentLanguage].product2;
-            document.getElementById('product3').innerText = translations[currentLanguage].product3;
-            document.getElementById('product4').innerText = translations[currentLanguage].product4;
-            document.getElementById('testimonialTitle').innerText = translations[currentLanguage].testimonialTitle;
-            document.getElementById('testimonialText').innerText = translations[currentLanguage].testimonialText;
-            document.getElementById('newsletterTitle').innerText = translations[currentLanguage].newsletterTitle;
-            document.getElementById('newsletterText').innerText = translations[currentLanguage].newsletterText;
-            document.getElementById('ctaText').innerText = translations[currentLanguage].ctaText;
-            document.getElementById('instagramLink').innerText = translations[currentLanguage].instagramLink;
-            document.getElementById('tiktokLink').innerText = translations[currentLanguage].tiktokLink;
-            document.getElementById('youtubeLink').innerText = translations[currentLanguage].youtubeLink;
-
-            // Update language selector text
-            document.querySelector('.language-selector').innerText = currentLanguage === 'fr' ? 'EN' : 'FR';
-        }
-    </script>
 </body>
 </html>
+
 
