@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
         }
         header {
             background: #333;
@@ -28,11 +28,15 @@
         }
         .product {
             width: 220px;
+            transition: transform 0.3s ease-in-out;
         }
         .product img {
             width: 100%;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .product:hover {
+            transform: scale(1.1);
         }
         footer {
             background: #333;
@@ -48,6 +52,44 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .cta:hover {
+            background: #e68a00;
+        }
+        .testimonial {
+            margin: 40px auto;
+            max-width: 600px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .newsletter {
+            margin: 40px auto;
+            max-width: 400px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .newsletter input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .newsletter button {
+            padding: 10px 20px;
+            background: #ff9900;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .newsletter button:hover {
+            background: #e68a00;
         }
     </style>
 </head>
@@ -76,9 +118,22 @@
         </div>
     </section>
     
+    <section class="testimonial">
+        <h3>Avis des clients</h3>
+        <p>"Un superbe cahier de coloriage, mes enfants adorent !" - Sophie L.</p>
+    </section>
+    
+    <section class="newsletter">
+        <h3>Abonnez-vous</h3>
+        <p>Recevez des mises à jour sur nos nouveaux cahiers !</p>
+        <input type="email" placeholder="Votre email">
+        <button>S'abonner</button>
+    </section>
+    
     <footer>
         <a href="https://www.amazon.com/ColoringAdventurer" class="cta">Acheter sur Amazon</a>
         <p>&copy; 2025 Coloring Adventurer</p>
     </footer>
 </body>
 </html>
+
